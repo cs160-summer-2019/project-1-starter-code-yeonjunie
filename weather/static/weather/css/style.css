@@ -1,3 +1,227 @@
 li {
     color: green;
 }
+
+
+#forecastscreen #temp {
+  color:black;
+  font-weight:bold;
+  font-family: 'Playfair Display', serif;
+}
+
+#forecastscreen #weatherunit {
+  color:black;
+  font-family: 'Playfair Display', serif;
+}
+
+#forecastscreen #time {
+  color:black;
+  font-family: 'Playfair Display', serif;
+  font-size:13px;
+  margin-left:4px;
+}
+
+#forecastscreen #cityname {
+  color:black;
+  font-family: 'Abril Fatface', cursive;
+  font-size:57px;
+}
+
+#forecastscreen #bigtemp {
+  color:black;
+  position:absolute;
+  top:310px;
+  left: 65px;
+  font-size:97px;
+  font-family: 'Abril Fatface', cursive;
+
+/*   font-family: 'Playfair Display', serif; */
+}
+
+#forecastscreen #bottomtemp {
+  color:black;
+  margin-left:10px;
+  margin-top:7px;
+  font-weight:bold;
+  font-size:14px;
+  font-family: 'Playfair Display', serif;
+}
+
+#forecastscreen #keywords {
+  color:black;
+  font-weight:bold;
+  font-style:italic;
+  font-size:17px;
+  font-family: 'Playfair Display', serif;
+}
+
+#forecastscreen #day {
+  color:black;
+  font-weight:bold;
+  font-size:14px;
+  font-family: 'Playfair Display', serif;
+}
+#forecastscreen #smallweather {
+  margin-left: -7px; 
+  margin-top:-5px;
+}
+#forecastscreen #keywordicon {
+  margin-left: -4px; 
+  margin-top:-8px;
+}
+
+#forecastscreen #keywordicon #keywordcircle{
+  color
+}
+
+
+#forecastscreen #cloudcircle,#forecastscreen #smallweather #cloudcircle, #comparison #cloudcircle{
+  color:#487D83;
+}
+#forecastscreen #cloud,#forecastscreen #smallweather #cloud, #comparison #cloud{
+  color:#EDE2CD;
+}
+
+#forecastscreen #smallweather #raincircle, #comparison #raincircle{
+  color:#283D6B;
+}
+#forecastscreen #smallweather #rain, #comparison #rain{
+  color:#A3B7D1;
+}
+
+#forecastscreen #smallweather #suncloudcircle, #comparison #suncloudcircle{
+  color:#705E56;
+}
+#forecastscreen #smallweather #suncloud, #comparison #suncloud{
+  color:#DACAC0;
+}
+
+
+#forecastscreen #suncircle,#forecastscreen #smallweather #suncircle, #comparison #suncircle{
+  color:#A74038;
+}
+#forecastscreen #sun,#forecastscreen #smallweather #sun, #comparison #sun{
+  color:#EBDCC5;
+}
+
+#forecastscreen #alertcircle, #comparison #alertcircle{
+  color:red;
+}
+
+#forecastscreen #alertmessage{
+  position: absolute;
+  top:230px;
+  font-family: 'Abril Fatface', cursive;
+  font-size:20px;
+  color:red;
+  right:120px;
+}
+
+#comparison #alert{
+  position: absolute;
+  top:669px;
+  color:red;
+  right:110px;
+  font-family: 'Abril Fatface', cursive;
+  
+}
+
+#comparison #plus {
+  position: absolute;
+  top:5px;
+  right:9px;
+  font-size: 30px;
+  color: black;
+}
+#comparison #mycities {
+  font-size: 30px;
+  color: black;
+  font-family: 'Abril Fatface', cursive;
+
+}
+
+#alertscreen #severeweather {
+  font-size: 30px;
+  color: black;
+  font-family: 'Abril Fatface', cursive;
+
+}
+#comparison #temp {
+  font-size: 30px;
+  font-family: 'Abril Fatface', cursive;
+  margin-left:-10px;  
+  color: black;
+}
+
+#comparison .smalltemp {
+  color:black;
+  font-weight:bold;
+  font-size:16px;
+  font-family: 'Playfair Display', serif;
+}
+
+#comparison #milton {
+  position: absolute;
+  top:365px;
+  right:32px;
+}
+#comparison #cam {
+  position: absolute;
+  top:520px;
+  right:300px;
+}
+
+#comparison #provi {
+  position: absolute;
+  top:667px;
+  right:150px;
+}
+
+#comparison #currcity {
+  font-size: 30px;
+  font-family: 'Abril Fatface', cursive;
+  color: black;
+}
+
+#comparison #cities {
+  padding:0;
+  margin:0;
+  color:black;
+  font-size:17px;
+  font-family: 'Abril Fatface', cursive;
+}
+
+#alertscreen #backsign {
+  font-size: 25px; 
+  color: black;
+  position: absolute;
+  top: 705px;
+  left:9px;
+}
+
+#alertscreen h1{
+  font-family: 'Abril Fatface', cursive;
+  color: black;
+    font-size:20px;
+
+}
+
+#alertscreen h3{
+  font-family: 'Playfair Display', serif;
+  color: black;
+    font-size:15px;
+}
+
+#alertscreen li{
+  font-family: 'Playfair Display', serif;
+  color: black;
+    font-size:15px;
+}
+
+
+
+
+
+
+
+

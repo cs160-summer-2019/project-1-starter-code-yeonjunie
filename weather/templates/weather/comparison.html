@@ -4,12 +4,163 @@
 <html>
 <head>
 	<title>Comparison</title>
-	
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="{% static 'weather/vendors/bootstrap/css/bootstrap.css' %}" />
 	<link rel="stylesheet" type="text/css" href="{% static 'weather/css/style.css' %}" />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  .noMargins {
+    padding-left:0;
+    padding-right:0;
+  }
+  .one{
+    border-right: 6px dotted #DA8155;
+    width: 50%;
+  }
+  .whitestrip{
+    background-color:white;
+    height:70px;
+    position:absolute;
+    top:50px;
+    width:105%;
+  }
+</style>
 </head>
-<body>
-	<!-- your comparison interface here -->
+  
+<body style="background-color:#E8E0E0">
+  <section class="whitestrip">
+  </section>
+  <div class="container">
+    <div id="comparison">
+      <p id = "mycities"class="text-center">
+        my cities
+      </p>
+      <a href="#">
+        <span id="plus">
+          <i class="fas fa-plus "></i>
+        </span>      
+      </a>
+      
+      
+      <div class="row">
+        <div class="col-3 text-center">
+          <span class="fa-stack fa-lg">
+                <i id = "cloudcircle" class="fas fa-circle fa-stack-2x" ></i>
+                <i id = "cloud" class="fas fa-cloud fa-stack-1x fa-inverse"></i>
+              </span>
+        </div>
+        <div class="col-6 text-center">
+          <p id="currcity">
+            Boston
+            <i class="fas fa-calendar-alt fa-1x"></i>
+          </p>
+          
+        </div>
+        <div class="col-3 text-center">
+          <p id="temp" style="margin-left:28px">
+                68&#176
+              </p>
+        </div>
+      </div>
+   
+      <div class="row" style="height:90px">
+        <div class="col-4 text-center">
+          <div class="one" style = "height:95px; margin-left:20px;">
+          </div>
+        </div>
+        <div class="col-4 text-center">
+          <div class="one" style = "height:95px; margin-left:20px;">
+          </div>
+        </div>
+        <div class="col-4 text-center">
+          <div class="one" style = "height:75px;">
+          </div>
+        </div>
+      </div>
+      
+      <div class="row" style="">
+        <div class="col-4 text-center">
+          <div class="one" style = "height:145px; margin-left:20px;">
+          </div>
+        </div>
+        <div class="col-4 text-center">
+          <div class="one" style = "height:120px; margin-left:20px;">
+          </div>
+        </div>
+        <div class="col-4 text-center">
+          <p id="cities">
+                Milton
+          </p>
+          <a href="#">
+            <span class="fa-stack fa-4x" style = "margin-left:-30px">
+                <i id = "suncircle" class="fas fa-circle fa-stack-2x" ></i>
+                <i id = "sun" class="fas fa-sun fa-stack-1x fa-inverse"></i>
+             </span>
+          </a>
+        </div>
+      </div>
+      
+       <div class="row" style="">
+         <div class="col-4 text-center">
+           <p id="cities" style ="margin-left:15px">
+                Cambridge
+              </p>
+           <a href="#">
+             <span class="fa-stack fa-4x" style = "margin-left:-20px">
+                <i id = "suncloudcircle" class="fas fa-circle fa-stack-2x" ></i>
+                <i id = "suncloud" class="fas fa-cloud-sun fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+        </div>
+        <div class="col-4 text-center">
+          <div class="one" style = "height:158px; margin-top:-24px; margin-left:20px;">
+          </div>
+        </div>
+        <div class="col-4 text-center">
+        </div>
+      </div>
+
+       <div class="row" style="">
+         <div class="col-4 text-center">
+           
+         </div>
+         <div class="col-4 text-center">
+           <p id="cities" style ="margin-left:20px">
+                Providence
+              </p>
+           <a href="#">
+             <span class="fa-stack fa-4x" style = "margin-left:-12px">
+                <i id = "raincircle" class="fas fa-circle fa-stack-2x" ></i>
+                <i id = "rain" class="fas fa-cloud-rain fa-stack-1x fa-inverse"></i>
+              </span>
+           </a>
+        </div>
+        <div class="col-4 text-center">
+          
+        </div>
+      </div>
+ 
+       <div id="milton" class="smalltemp">
+        <p>
+          78&#176/15mi
+        </p>
+      </div>
+      <div id="cam" class="smalltemp">
+        <p>
+          76&#176/20mi
+        </p>
+      </div>
+      <div id="provi" class="smalltemp">
+        <p>
+          72&#176/25mi
+        </p>
+      </div>
+  
+    </div>
+  </div>
+
+  
 </body>
 </html>

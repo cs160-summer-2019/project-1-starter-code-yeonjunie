@@ -4,13 +4,293 @@
 <html>
 <head>
 	<title>Forecast - Alert!</title>
-	
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="{% static 'weather/vendors/bootstrap/css/bootstrap.css' %}" />
 	<link rel="stylesheet" type="text/css" href="{% static 'weather/css/style.css' %}" />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<style>
+  .noMargins {
+    padding-left:0;
+    padding-right:0;
+  }
+  </style>
 </head>
-<body>
-	<!-- your single-location forecast with alert interface here -->
+<body style="background-color:#E8E0E0">
+	<div class="container">
+    <div id = "forecastscreen">
+      <a href="#">
+        <span style="font-size: 25px; color: black;">
+          <i class="fas fa-long-arrow-alt-left "></i>
+        </span>
+      </a>
+      <a href="#">
+        <span style="float:right" id="weatherunit"> &#176C/<b>&#176F</b> </span>
+      </a>
+      <div id="alertmessage">
+        <p>
+          SEVERE WEATHER ALERT
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-8 text-center">
+          <span class="fa-stack fa-6x">
+            <i id = "alertcircle" class="fas fa-circle fa-stack-2x" ></i>
+            <i id = "cloud" class="fas fa-cloud fa-stack-1x fa-inverse"></i>
+          </span>
+        </div>
+        <div class="col-4">
+          <div class ="row">
+            <div class="col-3 mt-4">
+              <p id="time">
+                10AM
+              </p>
+            </div>
+            <div class="col-9 ">
+              <span class="fa-stack fa-2x">
+                <i id = "cloudcircle" class="fas fa-circle fa-stack-2x" ></i>
+                <i id = "cloud" class="fas fa-cloud fa-stack-1x fa-inverse"></i>
+              </span>
+              <p id="temp" style="margin-left:28px">
+                70&#176
+              </p>
+            </div>
+          </div>
+          <div class ="row">
+            <div class="col-3  mt-4">
+              <p id="time">
+                11AM
+              </p>
+            </div>
+            <div class="col-9">
+              <span class="fa-stack fa-2x">
+                <i id = "cloudcircle" class="fas fa-circle fa-stack-2x" ></i>
+                <i id = "cloud" class="fas fa-cloud fa-stack-1x fa-inverse"></i>
+              </span>
+              <p id="temp" style="margin-left:28px">
+                71&#176
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-8 text-center">
+          <p id="cityname">
+            BOSTON
+          </p>
+        </div>
+        <div class="col-1 text-right" >
+          <p id="time" class ="mt-4">
+            12PM
+          </p>
+        </div>
+        <div class="col-3 text-center">
+          <span class="fa-stack fa-2x">
+                <i id = "cloudcircle" class="fas fa-circle fa-stack-2x" ></i>
+                <i id = "cloud" class="fas fa-cloud fa-stack-1x fa-inverse"></i>
+              </span>
+          <p id="temp" style="margin-left:19px">
+            71&#176
+          </p>
+        </div>
+      </div>
+      <div id="bigtemp">
+        <p>
+          68&#176
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-8 text-center" >
+<!--           <p id="bigtemp">
+            68&#176
+          </p> -->
+        </div>
+        <div class="col-1 text-right" >
+          <p id="time" class ="mt-4">
+            1PM
+          </p>
+        </div>
+        <div class="col-3 text-center">
+          <span class="fa-stack fa-2x">
+                <i id = "suncircle" class="fas fa-circle fa-stack-2x" ></i>
+                <i id = "sun" class="fas fa-sun fa-stack-1x fa-inverse"></i>
+              </span>
+          <p id="temp" style="margin-left:19px">
+            72&#176
+          </p>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-8">
+          <div class="row">
+            <div class="col-4 text-center">
+              <p id="keywords">
+                shopping
+              </p>
+              <a href="#">
+                <span id = "keywordicon"  class="fa-stack fa-2x">
+                  <i  class="fas fa-circle fa-stack-2x" style="color:#48514E" ></i>
+                  <i class="fas fa-shopping-bag fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </div>
+            <div class="col-4 text-center">
+              <p id="keywords" style="margin-left:20px">
+                food
+              </p>
+              <a href="#">
+                <span id = "keywordicon" class="fa-stack fa-2x">
+                  <i class="fas fa-circle fa-stack-2x" style ="color:#262632"></i>
+                  <i class="fas fa-utensils fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </div>
+            <div class="col-4 text-center">
+              <p id="keywords">
+                museum
+              </p>
+              <a href="#">
+                <span id = "keywordicon" class="fa-stack fa-2x">
+                  <i class="fas fa-circle fa-stack-2x" style="color:#5C363D" ></i>
+                  <i class="fas fa-landmark fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-1 text-right" >
+          <p id="time" class ="mt-4">
+            2PM
+          </p>
+        </div>
+        <div class="col-3 text-center">
+          <span class="fa-stack fa-2x">
+                <i id = "suncircle" class="fas fa-circle fa-stack-2x" ></i>
+                <i id = "sun" class="fas fa-sun fa-stack-1x fa-inverse"></i>
+              </span>
+          <p id="temp" style="margin-left:19px">
+            73&#176
+          </p>
+        </div>
+      </div>
+      
+      <div class="row text-center">
+        <div class="col-2 " style="text-align:center">
+          <p id="day">
+            tues
+          </p>
+          <span id = "smallweather" class="fa-stack fa-lg">
+                <i id = "suncloudcircle" class="fas fa-circle fa-stack-2x" ></i>
+                <i id = "suncloud" class="fas fa-cloud-sun fa-stack-1x fa-inverse"></i>
+              </span>
+          <p id="bottomtemp" >
+            73&#176
+          </p>
+        </div>
+        <div class="col-2 " style="">
+          <p id="day" >
+            wed
+          </p>
+          <span id = "smallweather" class="fa-stack fa-lg">
+                <i id = "suncircle" class="fas fa-circle fa-stack-2x" ></i>
+                <i id = "sun" class="fas fa-sun fa-stack-1x fa-inverse"></i>
+              </span>
+          <p id="bottomtemp" >
+            74&#176
+          </p>
+        </div><div class="col-2 " style="">
+          <p id="day">
+            thurs
+          </p>
+          <span id = "smallweather" class="fa-stack fa-lg">
+                <i id = "suncloudcircle" class="fas fa-circle fa-stack-2x" ></i>
+                <i id = "suncloud" class="fas fa-cloud-sun fa-stack-1x fa-inverse"></i>
+              </span>
+          <p id="bottomtemp">
+            76&#176
+          </p>
+        </div><div class="col-2 text-center" style="">
+          <p id="day" style="margin-right:-7px">
+            fri
+          </p>
+          <span id = "smallweather" class="fa-stack fa-lg">
+                <i id = "suncloudcircle" class="fas fa-circle fa-stack-2x" ></i>
+                <i id = "suncloud" class="fas fa-cloud-sun fa-stack-1x fa-inverse"></i>
+              </span>
+          <p id="bottomtemp">
+            74&#176
+          </p>
+        </div><div class="col-2 " style="">
+          <p id="day">
+            sat
+          </p>
+          <span id = "smallweather" class="fa-stack fa-lg">
+                <i id = "cloudcircle" class="fas fa-circle fa-stack-2x" ></i>
+                <i id = "cloud" class="fas fa-cloud fa-stack-1x fa-inverse"></i>
+              </span>
+          <p id="bottomtemp">
+            72&#176
+          </p>
+        </div><div class="col-2 " style="">
+          <p id="day">
+            sun
+          </p>
+          <span id = "smallweather" class="fa-stack fa-lg">
+                <i id = "raincircle" class="fas fa-circle fa-stack-2x" ></i>
+                <i id = "rain" class="fas fa-cloud-rain fa-stack-1x fa-inverse"></i>
+              </span>
+          <p id="bottomtemp" >
+            73&#176
+          </p>
+        </div>
+      </div>
+     
+    </div>
+  </div>
+  
+  <br>
+  <br>
+  <div class="container">
+    <div id = "alertscreen">
+      <p id = "severeweather"class="text-center">
+        <i class="fas fa-exclamation-circle" style = "color:red"></i>
+        SEVERE WEATHER
+        <i class="fas fa-exclamation-circle" style = "color:red"></i>
+      </p>
+      <a href="#">
+        <span id="backsign">
+          <i class="fas fa-long-arrow-alt-left " ></i>
+        </span>
+      </a>
+      <h1>
+        Storm Hitting Boston:
+      </h1>
+      <h3>
+        A dust storm warning in this area until 3:00PM EST.  
+      </h3>
+      <h1>
+        Safety Precautions:
+      </h1>
+      <li> Stay indoors </li>
+      <li style = "margin-top:13px"> Avoid travel </li>
+      <h1>
+        Nearby Unaffected cities:
+        <li> Chelsea MA, 20 mi <button type="button" class="btn btn-link">add</button>
+</li>
+        <li> Everett MA, 27 mi <button type="button" class="btn btn-link">add</button>
+</li>
+      </h1>
+      
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      
+    </div>
+  </div>
+  
+  
 </body>
 </html>
 
